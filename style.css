@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: "odin";
+  src: url(/assets/fonts/Norse-Bold.otf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* outline: 1px solid black; */
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #212121;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  position: relative;
+  min-width: 300px;
+  height: 100vh;
+  overflow: hidden;
+  margin-right: 50px;
+
+  &>.odin-logo {
+    background: rgb(0, 0, 0, 60%);
+    position: absolute;
+    color: white;
+    top: 8rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "odin", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+  }
+
+  &>.fond-image {
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &>.menu {
+    background-color: #212121;
+    width: 500px;
+    color: rgba(255, 255, 255, 0.87);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 20px rgb(25, 25, 25),
+      -10px -10px 20px rgb(60, 60, 60);
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    & .footer {
+      margin-top: 20px;
+    }
+
+    button {
+      border: 2px solid #0071e2;
+      background-color: #212121;
+      border-radius: 0.9em;
+      cursor: pointer;
+      padding: 0.8em 1.2em 0.8em 1em;
+      transition: all ease-in-out 0.2s;
+      font-size: 16px;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0071e2;
+    }
+
+    &>p {
+      font-weight: 500;
+      font-size: 1em;
+      line-height: 20px;
+      padding-top: 10px;
+
+      &:last-child {
+        font-weight: 200;
+      }
+
+      & a {
+        color: #0071e2;
+        text-decoration: none;
+      }
+
+      & a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &>section {
+      margin-top: 20px;
+
+      & form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & input {
+          border: 2px solid #0071e2;
+          background-color: #212121;
+          border-radius: 0.9em;
+          padding: 10px;
+          color: white;
+
+          &:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0px 1000px #212121 inset;
+            -webkit-text-fill-color: #fff;
+          }
+
+          &:invalid {
+            border: 2px solid #e20000;
+          }
+
+          &:focus {
+            outline: none;
+            border: 2px solid #45a2ff;
+          }
+        }
+      }
+
+      & .column1,
+      .column2 {
+        flex: 1;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 10px;
+      }
+    }
+  }
+}
